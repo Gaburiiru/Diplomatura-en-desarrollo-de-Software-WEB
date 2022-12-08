@@ -1,0 +1,47 @@
+import csv
+
+alumnos = {}
+notas = []
+
+with open("promedios.csv","w") as archivoCSV:
+    print("archivo csv creado exitosamente")
+    archivoCSV.close()
+
+with open("notasAlumnos.txt") as archivo:
+    encabezados = archivo.readline()
+    archivo_reader = csv.reader(archivo,delimiter=",")
+
+    encabezados = encabezados.rstrip("\n").upper().split(",")
+
+    print("notas ordenadas talke: ", encabezados)
+    for fila in archivo_reader:
+        print(fila)
+
+        nombre = (fila[1])
+        notas.append(fila[2:])
+
+        for indice in notas:
+            num = 0
+            for i in range(len(indice)):
+                indice[i] = int(indice[i])    
+                num += indice[i]
+            
+            promedio = (num/len(indice))
+            
+        key, value = nombre, promedio
+        alumnos[key]=value
+
+        with open("promedios.csv","r+") as archivoCSV:
+
+            encabezados = archivoCSV.readline()
+            agregar = csv.writer(archivoCSV, lineterminator=";")
+
+            agregar.writerow([key,value])
+            #agregar.writerow([key])
+            #agregar.writerow([value])
+
+            #cerrar el archivo csv
+            archivoCSV.close()
+
+    #cerrar el archivo txt
+    archivo.close()
