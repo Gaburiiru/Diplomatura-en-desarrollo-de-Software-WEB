@@ -1,0 +1,73 @@
+para saber donde estoy ubicado se usa "pwd"
+esto me devuelve en una linea mi ubicacion
+
+para saber como se utiliza un comando "man" (manual)
+man ls (te muestra como utilizar ls)
+
+para moverse se usa "cd"
+"cd ." se utiliza para posicionarse en una carpeta
+"cd .."se utiliza para retroceder desde una carpeta a otra
+*se puede combinar con /*
+
+para visualizar archivos u/o carpetas se utiliza "ls"
+"ls -a" se utiliza para mostar los archivos u/o carpetas ocultos
+*se puede combinar con /*
+*se puede combinar con cd ./*de este modo no hace faltar entrar en esa carpeta
+
+para crear una carpeta u/o directorio se utiliza "mkdir"
+*se puede combinar con / y ../*para espesificar donde crear la carpeta
+
+para crear un archivo se usa "touch" seguido de el nombre del archivo nuevo y la extencion
+*se puede utilizar / y ../*para espesificar donde crear el archivo
+
+para abrir un archivo se utiliza "vim ejemplo.txt" vim  el nombre del archivo con su extencion
+
+----------------Dentro de vim-----------------------------------------------
+para guardar el progreso del archivo se guarda apretando la tecla "ESC" y escribiendo :w (write = escribir)
+si quiero salir apreto "ESC" :q (quit = salir)
+y si quiero salir y guardar "ESC" :wq (write quit = escribir y salir)
+----------------------------------------------------------------------------
+
+para mostar el contenido de un archivo se utiliza "cat" seguido del nombre  la extencion del archivo
+
+para copiar un archivo dentro de un directorio se utiliza "cp" (copiar)
+cp <origen> <destino>
+cp ejeplo.txt (luego hacia donde lo que queres copiar)./
+cp ejemplo.txt ../ (va a copiar el mismo archivo hacia una carpeta anterior)
+cp ejemplo.txt ./ejemplo2.txt (esto copiara el mismo archivo pero con otro nombre)
+
+para buscar diferencias entre 2 arvhivos se utiliza "diff"
+diff ejemplo.txt ejemplo2.txt
+
+para mover un archivo se utiliza "mv" (mover)
+mv ejemplo2.txt ejemploCarpeta
+
+para eliminar un archivo o directorio se utiliza "rm" (remover)
+rm ejemplo.txt (cuidado no hay papelera)
+
+para mostrar imformacion sobre un archivo se utiliza "stat"
+stat ejemplo.txt
+
+para mostrar todos los procesos se utiliza "ps"
+
+para mostrar todos los procesos detalladamente se utiliza "top"
+muestra PID = proceso id
+(para salir de este modo se utiliza la tecla "CTRL"+"C")
+
+para matar un proceso se utiliza "kill"
+(se copia el PID que otorga el comando top)
+kill ejemploPID
+
+para reiniciar la pc se utiliza "reboot"
+
+para apagar la pc se utiliza "shutdown"
+
+para hacer Redirecciones se utiliza fd = (file descriptor)
+> (stdin)es para la entrada al sistema
+>> (stdout)es para la salida
+2> (stderr)es para dar error
+
+
+
+
+
